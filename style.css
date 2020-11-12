@@ -18,8 +18,47 @@ body {
   position: fixed;
   top: 25px;
   left: 25px;
+  box-shadow: 0 0 0 0 white,0 0 0 0 white;
+  transition: box-shadow 0.5s ease-in-out;
 }
+.menu:hover{
+  box-shadow: 0 0 0 8px white,0 0 0 8px white;
+}
+input:checked ~ label .menu{
+  box-shadow: 0 0 0 130vw white,0 0 0 100vh white;
 
+}
+input:checked ~ ul{
+  opacity: 1;
+}
+ul li a{
+  font-size: 50px;
+  color: blue ;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 30px;
+}
+ul{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  list-style: none;
+  display: flex;
+  opacity: 0;
+  transition: 0.25s 0.1s cubic-bezier(0, 1.07, 0, 1.02);
+  z-index: 2;
+
+}
+ul li{
+  padding: 20px 30px 10px 30px;
+  background-color: lightgray;
+  margin: 5px;
+  border-radius: 10px;
+}
+ul li:hover{
+  background-color: gray;
+}
 .hamburguer {
   position: relative;
   display: block;
